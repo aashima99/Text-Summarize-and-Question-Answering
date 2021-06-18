@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NLP Natural Language Processing</title>
+
+	 <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename = 'css/bootstrap.css') }}" rel="stylesheet">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.ico') }}" type="image/x-icon" />
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename = 'css/main.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <style type="text/css">
+	    body{
+	    	background: url('../static/images/qa.jpg');;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    color: #808080;
+		}
+    </style>
+
+</head>
+
+<body>
+	<!-- Static navbar -->
+	<div class="navbar navbar-inverse navbar-static-top">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <a class="navbar-brand" href="/">
+	            	<img class="logo" src="{{ url_for('static', filename = 'images/logo1.png')}}" alt="" />
+	            </a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	            <ul class="nav navbar-nav navbar-right">
+	            </ul>
+	        </div>
+	        <!--/.nav-collapse -->
+	    </div>
+	</div>
+
+	<!-- +++++ Projects Section +++++ -->
+	<div class="container pt">
+		<div class="row mt">
+	        <div class="col-lg-6 col-lg-offset-3 centered">
+	        	<div id="heading">Question/Answer</div>
+	            <hr>
+	            <p>Ask all kind of questions from the uploaded content.</p>
+	            <p>Get the perfect answers which contains top extracted key fragments and keywords specific to your question through our fast-reply system</p>
+	        </div>
+    	</div>
+	    <div class="row mt">
+	        <div class="col-lg-6 col-lg-offset-3 centered">
+	        	<form enctype="multipart/form-data" method="POST" action="/file">
+	        	<div class='custom'>
+	        		<label for="file-upload">Upload File</label>
+	        		<input id="file-upload" name="filename" class="btn btn-outline-dark" type="file" style="display:none;" required>
+	        	</div>
+	        		<br><br>
+			  		<button class="btn btn-dark" type="submit"  value="Submit">Submit</button>
+				</form>
+				<div>{{qa_output}}</div>
+	        </div>
+	    </div>
+	</div>
+	<div>
+
+	<div class="smart-wrap">
+        <div class="smart-forms smart-container wrap-3 col-lg-4 contain1">
+
+            <div class="form-header header-blue">
+                <h5><i class="fa fa-comments"></i> Please Ask Question </h5>
+            </div><!-- end .form-header section -->
+
+            <form method="post" action="/question" id="comment2">
+                <div class="form-body theme-blue">
+
+                    <div class="section">
+                        <label class="field prepend-icon">
+                            <textarea class="gui-textarea" id="comment" name="comment" placeholder="Enter question...">{{question}}</textarea>
+                            <span class="field-icon"><i class="fa fa-comments"></i></span>
+                            <span class="input-hint">
+                            </span>
+                        </label>
+                    </div><!-- end section -->
+
+                </div><!-- end .form-body section -->
+                <div class="form-footer">
+               		<button class="btn btn-dark" type="submit" value="Submit">Post Question</button>
+                </div><!-- end .form-footer section -->
+            </form>
+            
+
+        </div><!-- end .smart-forms section -->
+   
+        <div class="smart-forms smart-container wrap-3 col-lg-4 contain2">
+
+            <div class="form-header header-blue">
+                <h5><i class="fa fa-comments"></i>Your Answer </h5>
+            </div><!-- end .form-header section -->
+
+            <form>
+                <div class="form-body theme-blue" id="form-id">
+
+
+                    <div class="section">
+                        <label class="field prepend-icon">
+                            <textarea class="gui-textarea" id="gui-textarea1" name="comment" placeholder="Your Answer...">{{answer}}</textarea>
+                            <span class="field-icon"><i class="fa fa-comments"></i></span>
+                            <span class="input-hint">
+                            </span>
+                        </label>
+                    </div><!-- end section -->
+                </div>
+            </form>
+
+        </div><!-- end .smart-forms section -->
+    </div><!-- end .smart-wrap section -->
+
+    <div></div><!-- end section -->
+
+    <script>
+    		$('#file-upload').change(function() {
+		    var i = $(this).prev('label').clone();
+		    var file = $('#file-upload')[0].files[0].name;
+		  	$(this).prev('label').text(file);
+		});
+		
+		function myFunction() {
+		      document.getElementById("myDropdown").classList.toggle("show");
+		}
+		window.onclick = function(event) {
+			if (!event.target.matches('.dropbtn')) {
+			    var dropdowns = document.getElementsByClassName("dropdown-content");
+			    var i;
+			    for (i = 0; i < dropdowns.length; i++) {
+				      var openDropdown = dropdowns[i];
+				      if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+				      }
+			    }
+			}
+		};
+
+		/*var form = document.getElementById("butt");
+		form.addEventListener('submit', function(e){
+			e.preventDefault();
+		});*/
+	</script>
+</body>
+</html>

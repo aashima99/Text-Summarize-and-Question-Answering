@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NLP Natural Language Processing</title>
+	<link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.ico') }}" type="image/x-icon" />
+
+	 <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename = 'css/bootstrap.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename = 'css/main.css') }}" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <style type="text/css">
+	    body{
+	    	background: url('../static/images/summarize.jpg');;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		}
+    </style>
+</head>
+<body>
+	<!-- Static navbar -->
+	<div class="navbar navbar-inverse navbar-static-top" id="edit_summary1">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <a class="navbar-brand" href="/">
+	            	<img class="logo" src="{{ url_for('static', filename = 'images/logo1.png')}}" alt="" />
+	            </a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	            <ul class="nav navbar-nav navbar-right">
+	            </ul>
+	        </div>
+	        <!--/.nav-collapse -->
+	    </div>
+	</div>
+
+	<!-- +++++ Projects Section +++++ -->
+
+	<div class="container pt">
+		<div class="row mt">
+	        <div class="col-lg-6 col-lg-offset-3 centered">
+	        	<h3>Summary</h3>
+	            <hr>
+	            <p>Share your content. Get perfect summarized version of your information with most important keywords,that allow you to understand in seconds</p>
+	          
+	        </div>
+    	</div>
+	    <div class="row mt">
+	        <div class="col-lg-6 col-lg-offset-3 centered">
+	        	<form enctype="multipart/form-data" method="POST" action="/summarize">
+	        		<label class="radio-inline">
+				      <input type="radio" name="optradio" value="bert" checked>Using BERT
+				    </label>
+				    <label class="radio-inline">
+				      <input type="radio" name="optradio" value="features">Using Feature Extraction
+				    </label>
+				    <br><br>
+		        	<div class='custom'>
+		        		<label for="file-upload">Upload File</label>
+		        		<input id="file-upload" name="filename" type="file" class="btn btn-outline-dark" style="display:none;" required>
+		        	</div>
+	        		<br><br>
+			  		<button class="btn btn-dark" type="submit" value="Submit">Submit</button>
+				</form>
+
+	        </div>
+	    </div>
+	</div>
+
+
+    <div class="smart-wrap">
+        <div class="smart-forms smart-container wrap-3">
+
+            <div class="form-header header-blue" id="edit_summary2">
+                <h5><i class="fa fa-comments"></i>Summary </h5>
+            </div><!-- end .form-header section -->
+
+            <form method="post" action="/email" id="comment2">
+                <div class="form-body theme-blue">
+                    <div class="section">
+                        <label class="field prepend-icon">
+                            <textarea class="gui-textarea" id="comment" name="comment" placeholder="Your Answer...">{{summary_output}}</textarea>
+                            <span class="field-icon"><i class="fa fa-comments"></i></span>
+                            <span class="input-hint">
+                            </span>
+                        </label>
+                    </div><!-- end section -->
+                </div>
+                <div class="form-footer">
+               		<button type="button" id="button_click" class="button btn-blue" onclick="createNewElement();">Email Summary</button>
+               		<div id="newElementId"></div> 
+               		{{text}}
+                </div>
+            </form>
+
+        </div><!-- end .smart-forms section -->
+    </div><!-- end .smart-wrap section -->
+
+    <div></div><!-- end section -->
+
+	 <script>
+    		$('#file-upload').change(function() {
+		    var i = $(this).prev('label').clone();
+		    var file = $('#file-upload')[0].files[0].name;
+		  	$(this).prev('label').text(file);
+		});
+		
+		function myFunction() {
+		      document.getElementById("myDropdown").classList.toggle("show");
+		}
+		window.onclick = function(event) {
+			if (!event.target.matches('.dropbtn')) {
+			    var dropdowns = document.getElementsByClassName("dropdown-content");
+			    var i;
+			    for (i = 0; i < dropdowns.length; i++) {
+				      var openDropdown = dropdowns[i];
+				      if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+				      }
+			    }
+			}
+		};
+
+		function createNewElement(){
+			var txtNewInputBox = document.createElement('div');
+			txtNewInputBox.innerHTML='<div><br><label>Email &nbsp</label><input type="Email" name="email" required><br><br><button type="submit" class="button btn-blue">Submit</button><br></div>'
+			document.getElementById("newElementId").appendChild(txtNewInputBox);
+			var elem = document.getElementById('button_click');
+    		elem.parentNode.removeChild(elem);
+		}
+	</script>
+</body>
+</html>
