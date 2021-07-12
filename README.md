@@ -1,12 +1,22 @@
-# Text summarization and Question Answering system
+# TEXT SUMMARIZATION AND QUESTION ANSWERING SYSTEM
+
+An extractive summarization technique consists of selecting vital sentences, paragraphs, etc, from the original manuscript and concatenating them into a shorter form.  The significance of sentences is  strongly  based  on  statistical  and  linguistic features of sentences.  This document covers the extensive methodologies fitted, issues launch, exploration and future directions in text  summarization in our project. It covers the basic workflow of the project which includes the features we used for extractive text summarization and further we have also used BERT Summarizer for abstractive summarization of the Covid-19 data. For the question answering system we have used allennlp-models available on PyPI.
+
+## Table of Contents
+1. [**PROBLEM STATEMENT AND ITS SOLUTION**](#PROBLEM-STATEMENT-AND-ITS-SOLUTION)
+2. [**INSTALLATION AND USAGE ON LOCAL SERVER**](#INSTALLATION-AND-USAGE-ON-LOCAL-SERVER)
+3. [**WEB INTERFACE**](#Web-Interface)
+4. [**IMPLEMENTATION AND BASIC WORKFLOW**](#IMPLEMENTATION-AND-BASIC-WORKFLOW)
+5. [**WORKFLOW OF THE PROJECT**](#WORKFLOW-OF-THE-PROJECT)
+6. [**LIBRARIES USED**](#USER-DEFINED-FUNCTIONS)
+7. [**APPLICATIONS OF OUR PROJECT**](#Applications-of-Our-Project)
 
 ## PROBLEM STATEMENT AND ITS SOLUTION
 In a recent advance, the significance of text summarization accomplishes more attention due to data inundation on the web.  Hence, this information overwhelms yields in the 
 big requirement for more reliable and capable progressive text summarizers. Text Summarization gains its importance due to its various types of applications just like the summaries of books, digest- (summary of stories), the stock market, news, highlights- (meeting, event, sport), Abstract of scientific papers, newspaper articles, magazine etc. The main advantage of a text summarization is reading time of the user can be reduced.  
 The objective of our automatic text summarization system for Covid-19 data and Question Answering is to condense the origin text into a precise version preserves its report content and global denotation in order to provide relevant information to the users and also further solving their queries about Covid-19 in order to avoid confusion.  
 
-## INTRODUCTION
-An extractive summarization technique consists of selecting vital sentences, paragraphs, etc, from the original manuscript and concatenating them into a shorter form.  The significance of sentences is  strongly  based  on  statistical  and  linguistic features of sentences.  This document covers the extensive methodologies fitted, issues launch, exploration and future directions in text  summarization in our project. It covers the basic workflow of the project which includes the features we used for extractive text summarization and further we have also used BERT Summarizer for abstractive summarization of the Covid-19 data. For the question answering system we have used allennlp-models available on PyPI.
+# INSTALLATION AND USAGE ON LOCAL SERVER
 
 ## Web Interface
 
@@ -28,7 +38,6 @@ An extractive summarization technique consists of selecting vital sentences, par
 
 #### Analyse
 ![Alt Text](/images/Analyse.png)
-
 
 
 ## IMPLEMENTATION AND BASIC WORKFLOW
@@ -92,24 +101,3 @@ Bootstrap is an open-source JavaScript and CSS framework that can be used as a b
 5. Supplying the user, a smooth and clear interface.
 6. Configuring a fast replying server system.
 
-
-### Web Interface
-
-#### Dashboard
-![Alt Text](/images/Dashboard.png)
-
-
-#### About the Project
-![Alt Text](/images/About_Project.png)
-
-
-#### Summarize
-![Alt Text](/images/Summarize.png)
-
-
-#### Question Answering
-![Alt Text](/images/Q&A.png)
-
-
-#### Analyse
-![Alt Text](/images/Analyse.png)
