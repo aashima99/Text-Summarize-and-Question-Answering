@@ -16,7 +16,7 @@ In a recent advance, the significance of text summarization accomplishes more at
 big requirement for more reliable and capable progressive text summarizers. Text Summarization gains its importance due to its various types of applications just like the summaries of books, digest- (summary of stories), the stock market, news, highlights- (meeting, event, sport), Abstract of scientific papers, newspaper articles, magazine etc. The main advantage of a text summarization is reading time of the user can be reduced.  
 The objective of our automatic text summarization system for Covid-19 data and Question Answering is to condense the origin text into a precise version preserves its report content and global denotation in order to provide relevant information to the users and also further solving their queries about Covid-19 in order to avoid confusion.  
 
-# INSTALLATION AND USAGE ON LOCAL SERVER
+## INSTALLATION AND USAGE ON LOCAL SERVER
 
 ## Web Interface
 
@@ -42,8 +42,8 @@ The objective of our automatic text summarization system for Covid-19 data and Q
 
 ## IMPLEMENTATION AND BASIC WORKFLOW
 The implementation will be done in a series of steps as follows:
-1) Preprocessing: Preprocessing involves analyzing the input text based on the following parameters: a. Sentence count b. Sentence segmentation c. Word Stemming 
-2) Sentence scoring: All the sentences are scored based on various features such as its similarity to title, presence on numerical data in the sentence, its format (bold, italics), length of sentences, presence of certain phrases and its word similarity. 
+1) **Preprocessing**: Preprocessing involves analyzing the input text based on the following parameters: a. Sentence count b. Sentence segmentation c. Word Stemming 
+2) **Sentence scoring**: All the sentences are scored based on various features such as its similarity to title, presence on numerical data in the sentence, its format (bold, italics), length of sentences, presence of certain phrases and its word similarity. 
 
 The features used are:
 1) Cue Phrases
