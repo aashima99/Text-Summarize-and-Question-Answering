@@ -8,6 +8,29 @@ The objective of our automatic text summarization system for Covid-19 data and Q
 ## INTRODUCTION
 An extractive summarization technique consists of selecting vital sentences, paragraphs, etc, from the original manuscript and concatenating them into a shorter form.  The significance of sentences is  strongly  based  on  statistical  and  linguistic features of sentences.  This document covers the extensive methodologies fitted, issues launch, exploration and future directions in text  summarization in our project. It covers the basic workflow of the project which includes the features we used for extractive text summarization and further we have also used BERT Summarizer for abstractive summarization of the Covid-19 data. For the question answering system we have used allennlp-models available on PyPI.
 
+## Web Interface
+
+#### Dashboard
+![Alt Text](/images/Dashboard.png)
+
+
+#### About the Project
+![Alt Text](/images/About_Project.png)
+
+
+#### Summarize
+![Alt Text](/images/Summarize.png)
+
+
+#### Question Answering
+![Alt Text](/images/Q&A.png)
+
+
+#### Analyse
+![Alt Text](/images/Analyse.png)
+
+
+
 ## IMPLEMENTATION AND BASIC WORKFLOW
 The implementation will be done in a series of steps as follows:
 1) Preprocessing: Preprocessing involves analyzing the input text based on the following parameters: a. Sentence count b. Sentence segmentation c. Word Stemming 
