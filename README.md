@@ -17,6 +17,11 @@ big requirement for more reliable and capable progressive text summarizers. Text
 The objective of our automatic text summarization system for Covid-19 data and Question Answering is to condense the origin text into a precise version preserves its report content and global denotation in order to provide relevant information to the users and also further solving their queries about Covid-19 in order to avoid confusion.  
 
 ## INSTALLATION AND USAGE ON LOCAL SERVER
+1. Clone the GitHub Repository.
+2. Create Virtual Environment.
+3. Activate virtual environment.
+4. Install Dependencies mentioned in requirements.txt.
+5. Run the application.
 
 ## Web Interface
 
