@@ -2,7 +2,7 @@ from flask import Flask,render_template,url_for,redirect,request,jsonify
 from flask_mail import Mail,Message 
 import Text_summarization
 from werkzeug.utils import secure_filename
-from allennlp.predictors.predictor import Predictor
+# from allennlp.predictors.predictor import Predictor
 from summarizer import Summarizer
 import os
 import re
@@ -34,13 +34,7 @@ text_summary=''
 pred_summary=''
 name=''
 
-predictor = Predictor.from_path("https://storage.googleapis.com/allennlp-public-models/bidaf-model-2020.03.19.tar.gz")
-
-
-@app.route('/',methods=["GET","POST"])
-def dashboard():
-    return render_template('index.html')
-
+# predictor = Predictor.from_path("static/bidaf-model-2020.03.19.tar.gz")
 
 
 def readfile(flag):
@@ -138,6 +132,11 @@ def readfile(flag):
 	else:
 		text_summary=data
 	return "successfully_read"
+
+
+@app.route('/',methods=["GET","POST"])
+def dashboard():
+    return render_template('index.html')
 
 
 @app.route('/email',methods=["GET","POST"])
@@ -256,19 +255,19 @@ def file():
 
 
 
-@app.route('/question',methods=["GET","POST"])
-def question():
-	global text
-	question=str(request.form.get('comment'))
-	try:
-		result=predictor.predict(
-		  	passage=text,
-	        question=question
-		)
-		answer=result['best_span_str']
-		return render_template("quesans.html",question=question,answer=answer)
-	except Exception:
-		return render_template("quesans.html",answer="Sorry!!! Currently application is out of service")
+# @app.route('/question',methods=["GET","POST"])
+# def question():
+# 	global text
+# 	question=str(request.form.get('comment'))
+# 	try:
+# 		result=predictor.predict(
+# 		  	passage=text,
+# 	        question=question
+# 		)
+# 		answer=result['best_span_str']
+# 		return render_template("quesans.html",question=question,answer=answer)
+# 	except Exception:
+# 		return render_template("quesans.html",answer="Sorry!!! Currently application is out of service")
 
 
 @app.route('/MailMe', methods=['POST', 'GET'])
