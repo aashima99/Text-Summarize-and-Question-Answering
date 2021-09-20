@@ -6,7 +6,7 @@ An extractive summarization technique consists of selecting vital sentences, par
 1. [**PROBLEM STATEMENT AND ITS SOLUTION**](#PROBLEM-STATEMENT-AND-ITS-SOLUTION)
 2. [**INSTALLATION AND USAGE ON LOCAL SERVER**](#INSTALLATION-AND-USAGE-ON-LOCAL-SERVER)
 3. [**WEB INTERFACE**](#Web-Interface)
-4. [**IMPLEMENTATION AND BASIC WORKFLOW**](#IMPLEMENTATION-AND-BASIC-WORKFLOW)
+4. [**IMPLEMENTATION AND BASIC METHODOLOGY**](#IMPLEMENTATION-AND-BASIC-METHODOLOGY)
 5. [**METHODOLOGY OF THE PROJECT**](#METHODOLOGY-OF-THE-PROJECT)
 6. [**LIBRARIES USED**](#LIBRARIES-USED)
 7. [**APPLICATIONS OF OUR PROJECT**](#Applications-of-Our-Project)
@@ -40,7 +40,7 @@ The objective of our automatic text summarization system for Covid-19 data and Q
 ![Alt Text](/images/Analyse.png)
 
 
-## IMPLEMENTATION AND BASIC WORKFLOW
+## IMPLEMENTATION AND BASIC METHODOLOGY
 The implementation will be done in a series of steps as follows:
 1) **Preprocessing**: Preprocessing involves analyzing the input text based on the following parameters: a. Sentence count b. Sentence segmentation c. Word Stemming 
 2) **Sentence scoring**: All the sentences are scored based on various features such as its similarity to title, presence on numerical data in the sentence, its format (bold, italics), length of sentences, presence of certain phrases and its word similarity. 
