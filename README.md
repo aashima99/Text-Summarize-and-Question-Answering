@@ -7,7 +7,7 @@ An extractive summarization technique consists of selecting vital sentences, par
 2. [**INSTALLATION AND USAGE ON LOCAL SERVER**](#INSTALLATION-AND-USAGE-ON-LOCAL-SERVER)
 3. [**WEB INTERFACE**](#Web-Interface)
 4. [**IMPLEMENTATION AND BASIC WORKFLOW**](#IMPLEMENTATION-AND-BASIC-WORKFLOW)
-5. [**WORKFLOW OF THE PROJECT**](#WORKFLOW-OF-THE-PROJECT)
+5. [**METHODOLOGY OF THE PROJECT**](#METHODOLOGY-OF-THE-PROJECT)
 6. [**LIBRARIES USED**](#LIBRARIES-USED)
 7. [**APPLICATIONS OF OUR PROJECT**](#Applications-of-Our-Project)
 
@@ -68,7 +68,7 @@ BERTSUM has an in-built module called summarizer that takes in our data, accesse
 AllenNLP makes it easy to design and evaluate new deep learning models for nearly any NLP problem. AllenNLP makes it easy to design and evaluate new deep learning models for nearly any NLP problem, along with the infrastructure to easily run them in the cloud or on your laptop.
 
 
-## WORKFLOW OF THE PROJECT 
+## METHODOLOGY OF THE PROJECT 
 ![flowchart](https://github.com/infinity1013/TextSummarization/blob/main/static/flowchart.png)
 
 
