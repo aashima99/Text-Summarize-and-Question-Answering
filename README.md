@@ -1,4 +1,4 @@
-# TEXT SUMMARIZATION AND QUESTION ANSWERING SYSTEM
+# TEXT SUMMARIZATION AND QUESTION ANSWERING
 
 An extractive summarization technique consists of selecting vital sentences, paragraphs, etc, from the original manuscript and concatenating them into a shorter form.  The significance of sentences is  strongly  based  on  statistical  and  linguistic features of sentences.  This project covers the extensive methodologies fitted, issues launch, exploration and future directions in text  summarization in our project. It covers the basic workflow of the project which includes the features we used for extractive text summarization and further we have also used BERT Summarizer for abstractive summarization of the Covid-19 data. For the question answering system we have used allennlp-models available on PyPI.
 
