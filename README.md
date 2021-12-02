@@ -25,6 +25,10 @@ The objective of our automatic text summarization system for Covid-19 data and Q
 
 ## Web Interface
 
+A video containing all the functionalities and details of the project.
+
+https://drive.google.com/file/d/1b_pBAJw2F1gpND3aslK2ZRMY1UYxgppF/view?usp=sharing
+
 #### Dashboard
 ![Alt Text](/images/Dashboard.png)
 
